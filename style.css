@@ -3,3 +3,119 @@
     padding: 0;
     margin: 0;
 }
+
+:root{
+    --firt-color: #200016;
+    --sec-color: #10001f;
+}
+ul li{
+    list-style: none;
+}
+body{
+    background: linear-gradient(var(--firt-color), var(--sec-color));
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.logo{
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.navlist ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlist ul li{
+    margin-right: 30px;
+}
+
+.navlist ul li a{
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.navlist ul li a:hover, .active{
+    background-color: #fff;
+    color: var(--firt-color);
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+.main img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: .1s;
+}
+
+.main::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(to top, var(--firt-color) , transparent);
+}
+#moon{
+    mix-blend-mode: screen;
+    transform: translateY(80px);
+}
+
+.nouvil{
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    transform: translateY(-104px);
+}
+
+.contant{
+    color: #fff;
+    padding: 30px;
+}
+
+.contant h2{
+    margin: 20px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.contant p{
+    margin: 20px;
+    color: #fff;
+}
+
+/* #river{
+    display: none;
+} */
